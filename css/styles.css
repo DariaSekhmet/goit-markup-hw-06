@@ -562,8 +562,46 @@ a:active {
 
 /* СТИЛі ДЛЯ OUR PORTFOLIO: */
 
+.portf-thumb {
+  max-width: 296px;
+  padding: 0;
+}
+
 .portf-sect {
   padding: 96px 0;
+}
+
+.portf-title {
+  color: #2e2f42;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: capitalize;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.portf-menu-item {
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portf-menu:hover .portf-menu-item {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.portf-menu-title {
+  color: #2e2f42;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-align: left;
+  margin-bottom: 8px;
+  align-self: stretch;
 }
 
 .portf-menu {
@@ -574,14 +612,17 @@ a:active {
   flex-direction: column;
 }
 
-.portf-menu-item {
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.portf-menu-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  align-self: stretch;
 }
 
-.portf-menu-item:hover {
-  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
-    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
-    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+.portf-menu:hover .portf-menu-item {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .overlay-card {
@@ -612,6 +653,32 @@ a:active {
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
   border-top: none;
+  max-width: 288px;
+}
+
+@media screen and (min-width: 768px) {
+  .portf-thumb {
+    max-width: 736px;
+  }
+
+  .portf-menu {
+    gap: 72px 24px;
+    flex-direction: row;
+  }
+
+  .portf-menu-item {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .portf-thumb {
+    max-width: 1158px;
+  }
+
+  .portf-menu-item {
+    width: calc((100% - 48px) / 3);
+  }
 }
 
 /* СТИЛІ ДЛЯ ФУТЕРА: */
@@ -782,3 +849,7 @@ a:active {
     margin-right: auto;
   }
 }
+
+/* СТИЛІ МОБІЛЬНОГО МЕНЮ: */
+
+/* СТИЛІ МОДАЛЬНОГО ВІКНА: */
