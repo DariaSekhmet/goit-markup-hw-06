@@ -425,8 +425,6 @@
   pointer-events: auto;
 }
 
-/* СТИЛІ МОДАЛЬНОГО ВІКНА: */
-
 .modal-leave-contacts {
   position: absolute;
   top: 50%;
